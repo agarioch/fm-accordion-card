@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  --desaturated-blue: hsl(238, 29%, 16%);
+  --transparent-desaturated-blue: hsl(238, 29%, 16%, 0.5);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --dark-greyish-blue: hsl(237, 12%, 33%);
+  --greyish-blue: hsl(240, 6%, 50%);
+  --light-greyish-blue: hsl(240, 5%, 91%);
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(var(--soft-violet),var(--soft-blue));
+  background-repeat: repeat-x;
+  background-color: var(--soft-blue);
+}
+.wrapper {
+  margin-top: 160px;
+}
+
+/* FAQ Card */
+.faq {
+  width: 90%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 20px;
+  color: var(--desaturated-blue);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  box-shadow: 0 10px 15px var(--transparent-desaturated-blue);
+}
+/* FAQ Image */
+.faq__img {
+  margin-top: -110px;
+  margin-left: calc(240px - 266px); /* svg contains empty 26px on left*/
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+}
+.faq__img--illustration {
+  position: relative;
+  z-index: 99;
+}
+.faq__img--shadow {
+  position: absolute;
+  bottom:-12px;
+  left: 10%;
+  z-index: 0;
+}
+
+/* FAQ Info */
+.faq__info {
+  width: 85%;
+}
+.faq__title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 6px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.faq__list {
+  list-style: none;
+  padding: 0px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left:0;
+  margin-right:0;
+}
+.faq__list__item {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--light-greyish-blue);
+}
+.faq__list__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq__list__question--text {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 400;
+}
+.faq__list__question--selected {
+  font-weight: 700;
+}
+.faq__list__answer {
+  margin-right: 30px;
+  color: var(--greyish-blue);
+  margin-bottom: 0;
+
+}
+.faq__list__answer--hidden {
+  display: none;
+}
+/* Footer */
+.attribution { margin: auto; font-family: 'Kumbh Sans', sans-serif; font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(228, 29%, 93%); }
