@@ -55,8 +55,8 @@ body {
   position: relative;
   text-align: center;
 }
-.faq__img__wrapper {
-  transform: translate(0,0);
+.faq__img--desktop {
+  display: none;
 }
 .faq__img--illustration {
   position: relative;
@@ -149,11 +149,13 @@ body {
     margin-top: 0px;
     margin-left: -70px;
   }
-  .faq__img--illustration {
-    content: url(./images/illustration-woman-online-desktop.svg);
+  .faq__img--mobile {
+    display: none;
+  }
+  .faq__img--desktop {
+    display: block;
   }
   .faq__img--shadow {
-    content: url(./images/bg-pattern-desktop.svg);
     width: 200%;
     left: -460px;
     bottom: -230px;
@@ -164,8 +166,18 @@ body {
     margin-left:-100px;
     margin-top: -220px;
     z-index: 100;
+    animation: upAndDown--desktop 0.8s ease-in-out infinite alternate;
   }
   .faq__info {
     margin: 30px 90px;
+  }
+}
+/* Copied box animation idea from Ken (https://www.frontendmentor.io/profile/lmaoken) */
+@keyframes upAndDown--desktop {
+  0% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.8rem);
   }
 }
